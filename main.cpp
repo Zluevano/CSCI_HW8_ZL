@@ -6,6 +6,7 @@ using namespace std;
 // Prototypes
 void printMatrix(int myMat[][3], int n_rows, int n_colum);
 int CountUnhealthySensitive (int myMat [10][3], int n_rows, int n_colum);
+int 
 
 // Main Function
 int main()
@@ -24,10 +25,14 @@ int AirQuality_Index[10][3] =
   {17, 13, 27}
                  };
 
-cout << "Displaying Air Quality Index for Seperate Regions." << endl;
+cout << setw(65) << "Displaying Air Quality Index for Seperate Regions." << endl;
+cout << endl;
+cout << setw(21) << "GJ:" << setw(25) <<"Fort Collins:" << setw(22) << "Denver/Boulder:" << endl;
 printMatrix(AirQuality_Index, 10, 3);
 cout << endl;
 
+cout << "From 10/4/2020 - 10/13/2020 The air quality was unhealthy for sensitive groups in:" << endl;
+  
 cout << "Grand Junction: ";
 CountUnhealthySensitive (AirQuality_Index, 10, 0);
 cout << endl;
@@ -38,11 +43,9 @@ cout << endl;
 
 cout << "Denver/Boulder: ";
 CountUnhealthySensitive (AirQuality_Index, 10, 2);
-cout << endl;
-
-cout << "Denver/Boulder: ";
-CountUnhealthySensitive (AirQuality_Index, 10, 3);  
+cout << endl; 
 }
+
 
 // Outside Function
 void printMatrix(int myMat[][3], int n_rows, int n_colum)
@@ -51,7 +54,7 @@ void printMatrix(int myMat[][3], int n_rows, int n_colum)
   {
   for (int c = 0; c < n_colum; c++)
     {
-    cout << setw(5) <<myMat[r][c];
+    cout << setw(20) <<myMat[r][c];
     }
   cout << endl;
   }
@@ -59,7 +62,23 @@ void printMatrix(int myMat[][3], int n_rows, int n_colum)
 
 
 
+int CountUnhealthySensitive (int myMat [10][3], int n_rows, int n_colum)
+{
+int count = 0;
+  
+int row;
+int unhealthy_level = 101;
+int max = 150;
+for (row = 0; row < n_rows; row++)
+    {
+    if (myMat[row][n_colum] >= (unhealthy_level)) //&& (myMat[r][c] <= max))
+    count++; 
+    }
+ cout << count;
+return count;
+}
 
+/*
 int CountUnhealthySensitive (int myMat [10][3], int n_rows, int n_colum)
 {
 int count = 0;
@@ -78,7 +97,7 @@ for (row = 0; row < n_rows; row++)
  cout << count;
 return count;
 }
-
+*/
   
 /*
 for (row = 0; row < n_rows; row++)
