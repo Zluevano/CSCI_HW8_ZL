@@ -28,6 +28,7 @@ int AirQuality_Index[10][3] =
 cout << setw(65) << "Displaying Air Quality Index for Seperate Regions." << endl;
 cout << endl;
 cout << setw(21) << "GJ:" << setw(25) <<"Fort Collins:" << setw(22) << "Denver/Boulder:" << endl;
+  
 printMatrix(AirQuality_Index, 10, 3);
 cout << endl;
 
