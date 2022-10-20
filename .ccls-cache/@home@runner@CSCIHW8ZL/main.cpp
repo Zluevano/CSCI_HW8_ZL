@@ -6,7 +6,7 @@ using namespace std;
 // Prototypes
 void printMatrix(int myMat[][3], int n_rows, int n_colum);
 int CountUnhealthySensitive (int myMat [10][3], int n_rows, int n_colum);
-int 
+int meanAirQuality (int myMat [10][3], int n_rows, int n_colum);
 
 // Main Function
 int main()
@@ -44,10 +44,19 @@ cout << endl;
 cout << "Denver/Boulder: ";
 CountUnhealthySensitive (AirQuality_Index, 10, 2);
 cout << endl; 
+
+cout << endl;
+cout << "From 10/4/2020 - 10/13/2020 the average air quality in:" << endl;
+cout << "Grand Junction was ";
+meanAirQuality(AirQuality_Index, 10, 0);
+cout << endl << "Fort Collins was ";
+meanAirQuality(AirQuality_Index, 10, 1); 
+cout << endl << "Denver/Boulder was ";
+meanAirQuality(AirQuality_Index, 10, 2);
 }
 
 
-// Outside Function
+// Outside Functions
 void printMatrix(int myMat[][3], int n_rows, int n_colum)
   {
   for (int r = 0; r < n_rows; r++)
@@ -59,8 +68,6 @@ void printMatrix(int myMat[][3], int n_rows, int n_colum)
   cout << endl;
   }
 }
-
-
 
 int CountUnhealthySensitive (int myMat [10][3], int n_rows, int n_colum)
 {
@@ -74,41 +81,21 @@ for (row = 0; row < n_rows; row++)
     if (myMat[row][n_colum] >= (unhealthy_level)) //&& (myMat[r][c] <= max))
     count++; 
     }
- cout << count;
+ cout << count << " Times";
 return count;
 }
 
-/*
-int CountUnhealthySensitive (int myMat [10][3], int n_rows, int n_colum)
+int meanAirQuality (int myMat [][3], int n_rows, int n_colum)
 {
-int count = 0;
+int sum = 0;
+int avg;
+
+for (int row = 0; row < n_rows; row++)
+  sum = sum + myMat[row][n_colum];
+
+  avg = sum / n_rows;
+
+  cout << avg;
+  return avg;
   
-int row;
-int unhealthy_level = 101;
-int max = 150;
-for (int c = 0; c < n_colum; c++)
-  {
-for (row = 0; row < n_rows; row++)
-    {
-    if (myMat[row][c] >= (unhealthy_level)) //&& (myMat[r][c] <= max))
-    count++; 
-    }
-  }  
- cout << count;
-return count;
 }
-*/
-  
-/*
-for (row = 0; row < n_rows; row++)
-  {
-  for (int c = 0; c < n_colum; c++)
-    {
-    if (myMat[row][c] >= (unhealthy_level)) //&& (myMat[r][c] <= max))
-    count++; 
-    }
-  }  
- cout << count;
-return count;
-}
-*/
