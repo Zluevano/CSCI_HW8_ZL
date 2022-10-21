@@ -14,6 +14,7 @@ int students;
 int add = 1;
 int sum = 0;
 int add2 = 0;
+int weight = 0;
 
 cout << "Input the number of students:" << endl;
 cin >> students;
@@ -68,10 +69,28 @@ for (int r = 0; r < students; r++)
 cout << endl;
 printMatrix(grades, students, 7);
 
-  
-  
-}
+cout << "The Weighted" << endl;
+for (int r = 0; r < students; r++)
+  {
+  weight = 0;
+  for (int c = 1; c < 5; c++)
+    {
+      if ((c == 1) or (c == 4))
+       weight = (0.2 * grades[r][c] + weight);
 
+      else if ((c == 2) or (c == 3))
+       weight = (0.3 * grades[r][c] + weight);
+
+      cout << weight <<" ";
+      grades[r][6] = weight;
+    }
+
+  }
+
+cout << endl;
+printMatrix(grades, students, 7);
+
+  }
 
 void printMatrix(int myMat[][7], int n_rows, int n_colum)
   {
@@ -79,7 +98,7 @@ void printMatrix(int myMat[][7], int n_rows, int n_colum)
   {
   for (int c = 0; c < n_colum; c++)
     {
-    cout << setw(20) <<myMat[r][c];
+    cout << setw(10) <<myMat[r][c];
     }
   cout << endl;
   }

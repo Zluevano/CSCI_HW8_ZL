@@ -65,6 +65,7 @@ for (int r = 0; r < students; r++)
     sum = 0;
   }
 
+
 cout << endl;
 printMatrix(grades, students, 7);
 
