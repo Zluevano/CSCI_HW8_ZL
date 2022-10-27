@@ -113,7 +113,7 @@ void Top(int myMat[][8], int n_row, int n_column)
          min = min + myMat[r][c];
          myMat[r][7] = min/3; 
           }
-
+// round for weighted.
         else if (myMat[r][c] > myMat[r][c+1]){
          min = (min + myMat[r][c]);
          myMat[r][7] = min/3; 
