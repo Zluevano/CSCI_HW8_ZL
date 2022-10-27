@@ -1,5 +1,6 @@
 /*
 Programmer: Zachary Luevano
+Instructor: Dr. Mellenthin
 Description: Extension of HW1, has a matrix at which you enter the amount of
 students and proceed to enter 4 grades, this could easily be expanded to have
 another input for amount of grades making this more versatile but anyhow the

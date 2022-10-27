@@ -85,13 +85,17 @@ int main() {
   }
 
   cout << endl;
+   cout << setw(23) << "Student" << setw(19) << "Grade 1" << setw(19)
+       << "Grade 2" << setw(20) << "Grade 3" << setw(22) << "Grade 4"
+       << setw(19) << "Average" << setw(20) << "Weighted"
+       << endl;
   printMatrix(grades, students, 7);
 }
 
 void printMatrix(int myMat[][7], int n_rows, int n_colum) {
   for (int r = 0; r < n_rows; r++) {
     for (int c = 0; c < n_colum; c++) {
-      cout << setw(10) << myMat[r][c];
+      cout << setw(20) << myMat[r][c];
     }
     cout << endl;
   }

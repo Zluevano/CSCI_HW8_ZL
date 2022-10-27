@@ -1,5 +1,6 @@
 /*
 Programmer: Zachary Luevano
+Instructor: Dr. Mellenthin
 Description: Rather interesting program that takes a char value either T for 1 or F for 0. This is entered into an array
 that then goes to another array that reads if 'T' then add to the sum and 'F' which technically also adds but by 0. Later it outputs this and multiples the value ofthe instances of T by 5 for a grade calculation.
 Date Finished: 10/25/2022
