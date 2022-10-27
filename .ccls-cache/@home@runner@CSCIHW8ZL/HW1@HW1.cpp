@@ -1,5 +1,6 @@
 /*
 Programmer: Zachary Luevano
+Instructor: Dr. Mellenthin
 Description: Realtively simple program that allows an input of students into an
 array and then entering 4 grades (numbers) into the said arrray. It takes these
 and does some multiplication, divsion or both and proceeds to output these to

@@ -1,5 +1,6 @@
 /*
 Programmer: Zachary Luevano
+Instructor: Dr. Mellenthin
 Description: Takes a 2 x 2 matrix finds the determinent and then proceedes to find the inverse using the determiment and flipping some components on the matrix, unsure 
 if I've seen this before but programming matrixes for the purpose of math dramatically simplifiers process compared to the tradational way of doing things row by row.
 Math speaking the code itself labels what is done and makes the process incredibly easy to understand.
