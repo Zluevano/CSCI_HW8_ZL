@@ -1,3 +1,11 @@
+/*
+Programmer: Zachary Luevano
+Description: Handout in class, incredibly simple program now that I look at it, somehow I found 2D arrays simpler than 1D, 
+possibly due to them looking like a spread sheet, at any point I feel very comfortable with arrays now. Now this program just takes a preentered array and does some  basic calculations using the function CountUnhealthySensitive that is basically just checking if a number at a given spot on a column is > or = 150 in which case it adds to a sum. Keeps track of this outputs it for each column later it does an average air quality (mean) of all the numbers of each row and return them.
+Great example of how arrays work too.
+Date Finished: 10/20/2022
+*/
+
 #include <iostream>
 #include <iomanip>
 

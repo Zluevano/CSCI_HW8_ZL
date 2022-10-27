@@ -4,7 +4,7 @@ Description: Realtively simple program that allows an input of students into an
 array and then entering 4 grades (numbers) into the said arrray. It takes these
 and does some multiplication, divsion or both and proceeds to output these to
 other columns of the same matrix. before. 
-Date Finished: 10/26/2022
+Date Finished: 10/23/2022
 */
 
 #include <iomanip>
